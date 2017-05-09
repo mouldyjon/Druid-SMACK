@@ -10,23 +10,23 @@
     </property>
     <property>
         <name>mapreduce.jobhistory.address</name>
-        <value>192.168.0.50:10020</value>
+        <value>localhost:10020</value>
     </property>
     <property>
         <name>mapreduce.jobhistory.webapp.address</name>
-        <value>192.168.0.50:19888</value>
+        <value>localhost:19888</value>
     </property>
     <property>
         <name>yarn.log.server.url</name>
-        <value>http://192.168.0.5:19888/jobhistory/logs/</value>
+        <value>http://localhost:19888/jobhistory/logs/</value>
     </property>
     <property>
         <name>yarn.resourcemanager.hostname</name>
-        <value>192.168.0.50</value>
+        <value>localhost</value>
     </property>
     <property>
         <name>yarn.timeline-service.hostname</name>
-        <value>192.168.0.50</value>
+        <value>localhost</value>
     </property>
     <property>
         <name>yarn.nodemanager.delete.debug-delay-sec</name>
