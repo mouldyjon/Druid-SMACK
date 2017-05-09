@@ -25,10 +25,9 @@ function installScala {
 
 function setupEnvVars {
 	echo "creating scala environment variables"
-	echo export SCALA_HOME=$SCALA_PREFIX
-	echo export PATH=${PATH}:${SCALA_HOME}/bin
+	export SCALA_HOME=/usr/local/scala
+	export PATH=${PATH}:${SCALA_HOME}/bin
 }
-
 
 echo "setup Scala"
 installScala
