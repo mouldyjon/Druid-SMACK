@@ -20,22 +20,22 @@ function installZeppelin {
 		else
 			installRemoteZeppelin
 			fi
-	ln -s /usr/local/$ZEPPELIN_VERSION-bin-all /usr/local/zeppelin
-	mkdir -p /usr/local/zeppelin/logs
+	ln -s /usr/local/$ZEPPELIN_VERSION-bin-all $ZEPPELIN_PREFIX
+	mkdir -p $ZEPPELIN_PREFIX/logs
 }
 
 function setupZeppelin {
 	echo "setup zeppelin"
-	cp -f /vagrant/resources/zeppelin/zeppelin-site.xml /usr/local/zeppelin/conf
+	cp -f $ZEPPELIN_RES_DIR/zeppelin-site.xml $ZEPPELIN_CONF_DIR
 }
 
 function startServices {
 	echo "starting Zepplin service"
-	/usr/local/zeppelin/bin/zeppelin-daemon.sh start
+	$ZEPPELIN_PREFIX/bin/zeppelin-daemon.sh start
 }
 
 echo "setup Zeppelin"
 installZeppelin
 setupZeppelin
-startServices
+#startServices
 echo "Zeppelin setup complete"
