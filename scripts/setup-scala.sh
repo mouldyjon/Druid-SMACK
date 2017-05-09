@@ -32,5 +32,4 @@ function setupEnvVars {
 
 echo "setup Scala"
 installScala
-setupScala
 setupEnvVars
